@@ -2,186 +2,275 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#e9dfc9">
-  <meta name="description" content="رنگ بهشت؛ رنگی از عشق، ایثار و زیبایی">
-  <title>رنگ بهشت | پیوندهای ما</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>رنگ بهشت | شبکه‌های اجتماعی</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Tahoma, Arial, sans-serif;
-      color: #f8f0dc;
-      background:
-        linear-gradient(
-          rgba(34, 30, 23, 0.58),
-          rgba(34, 30, 23, 0.78)
-        ),
-        url("assets/background.jpg") center / cover fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 30px 16px;
-    }
+:root {
+  --cream: #F5E9D0;
+  --gold: #C7A66A;
+  --dark: #163D32;
+}
 
-    .container {
-      width: 100%;
-      max-width: 440px;
-      text-align: center;
-      padding: 30px 24px;
-      border: 1px solid rgba(234, 214, 168, 0.55);
-      border-radius: 24px;
-      background: rgba(39, 34, 27, 0.72);
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(8px);
-    }
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  color: var(--cream);
+  background:
+    linear-gradient(rgba(10,25,20,.48), rgba(10,25,20,.65)),
+    url("assets/background.jpg") center / cover fixed;
+}
 
-    .logo {
-      width: 145px;
-      height: 145px;
-      object-fit: contain;
-      border-radius: 50%;
-      border: 2px solid #d7bd86;
-      background: #eee3cc;
-      margin-bottom: 16px;
-    }
+.page {
+  width: 100%;
+  max-width: 560px;
+}
 
-    h1 {
-      font-size: 29px;
-      color: #ead5a6;
-      margin: 4px 0 14px;
-    }
+.brand-card {
+  padding: 28px 24px;
+  text-align: center;
+  background: rgba(15,40,32,.88);
+  border: 1px solid rgba(245,233,208,.35);
+  border-radius: 28px;
+  box-shadow: 0 15px 45px rgba(0,0,0,.22);
+  backdrop-filter: blur(12px);
+}
 
-    .description {
-      font-size: 14px;
-      line-height: 2.2;
-      color: #f4ead6;
-      margin-bottom: 26px;
-    }
+.logo {
+  display: block;
+  width: 150px;
+  max-width: 48%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 18px;
+}
 
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: #f7edd8;
-      background: rgba(239, 225, 199, 0.09);
-      border: 1px solid rgba(234, 214, 168, 0.45);
-      border-radius: 13px;
-      padding: 12px 16px;
-      margin: 12px 0;
-      transition: 0.25s ease;
-    }
+.brand-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--cream);
+  margin: 8px 0;
+}
 
-    .social-link:hover {
-      background: #e6d3aa;
-      color: #3b3022;
-      transform: translateY(-2px);
-    }
+.gold-line {
+  width: 75px;
+  height: 2px;
+  margin: 18px auto;
+  border-radius: 10px;
+  background: var(--gold);
+}
 
-    .social-link img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-    }
+.brand-description {
+  color: #E9DFC9;
+  font-size: 14px;
+  line-height: 2.2;
+  margin: 0;
+}
 
-    .social-link span {
-      flex: 1;
-      text-align: right;
-      font-size: 15px;
-      font-weight: bold;
-    }
+.section-title {
+  text-align: center;
+  color: var(--cream);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 24px 0 12px;
+}
 
-    footer {
-      margin-top: 24px;
-      font-size: 11px;
-      color: #d7c7a8;
-    }
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 58px;
+  margin: 12px 0;
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--gold);
+  background: rgba(245,233,208,.96);
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  transition: .2s ease;
+}
 
-    @media (max-width: 480px) {
-      .container {
-        padding: 25px 18px;
-      }
+.social-link:hover {
+  background: var(--gold);
+  border-color: var(--cream);
+  transform: translateY(-2px);
+}
 
-      h1 {
-        font-size: 25px;
-      }
+.social-link img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
 
-      .logo {
-        width: 125px;
-        height: 125px;
-      }
-    }
-  </style>
+.social-link span {
+  flex: 1;
+  text-align: center;
+  padding-left: 38px;
+}
+
+.info-card {
+  margin-top: 18px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(15,40,32,.88);
+  border: 1px solid rgba(245,233,208,.35);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+}
+
+.info-title {
+  color: var(--cream);
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.info-value {
+  color: #E9DFC9;
+  font-size: 18px;
+  font-weight: 700;
+  direction: ltr;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.info-value a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.donation-name {
+  color: var(--cream);
+  font-size: 14px;
+  margin: 12px 0 16px;
+}
+
+.copy-button {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 10px 20px;
+  background: var(--cream);
+  color: var(--dark);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  background: var(--gold);
+}
+
+.copy-message {
+  min-height: 24px;
+  color: var(--cream);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.footer-text {
+  color: #E9DFC9;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  body { padding: 20px 12px; }
+  .brand-card { padding: 24px 18px; }
+  .brand-title { font-size: 27px; }
+  .logo { width: 130px; }
+}
+</style>
 </head>
 
 <body>
-  <main class="container">
+<main class="page">
 
-    <img class="logo"
-         src="assets/logo.jpg"
-         alt="لوگوی رنگ بهشت">
+  <section class="brand-card">
+    <img class="logo" src="assets/logo.png" alt="لوگوی رنگ بهشت">
 
-    <h1>رنگ بهشت</h1>
+    <div class="brand-title">رنگ بهشت</div>
+    <div class="gold-line"></div>
 
-    <p class="description">
-      به صفحه‌ی رسمی رنگ بهشت خوش آمدید؛
-      همراه با عشق، ایثار و خدمت،
-      برای زیبایی و زنده نگه داشتن یاد شهدا.
+    <p class="brand-description">
+      رنگ بهشت، روایت قدم‌هایی است که برای زنده نگه‌داشتن یاد شهدا برداشته می‌شوند.
+      ما در گروه جهادی رنگ بهشت، با تکیه بر روحیه خدمت و کار جمعی، برای رسیدگی،
+      رنگ‌آمیزی و زیباسازی مزار شهدا تلاش می‌کنیم؛ به این امید که سهم کوچکی در
+      پاسداشت یاد و آرمان‌های آن‌ها داشته باشیم.
+      اینجا خدمت، تنها یک کار نیست؛ روایتی است از عشق، مسئولیت و عهدی که فراموش نمی‌شود.
     </p>
+  </section>
 
-    <a class="social-link"
-       href="https://www.instagram.com/YOUR_ID/"
-       target="_blank" rel="noopener noreferrer">
-      <img src="assets/instagram.png" alt="">
-      <span>اینستاگرام</span>
-    </a>
+  <div class="section-title">از طریق شبکه‌های اجتماعی با ما همراه باشید</div>
 
-    <a class="social-link"
-       href="https://t.me/YOUR_ID"
-       target="_blank" rel="noopener noreferrer">
-      <img src="assets/telegram.png" alt="">
-      <span>تلگرام</span>
-    </a>
+  <a class="social-link" href="https://www.instagram.com/rangebehesht_ir"
+     target="_blank" rel="noopener noreferrer">
+    <img src="assets/instagram.jpg" alt="">
+    <span>اینستاگرام</span>
+  </a>
 
-    <a class="social-link"
-       href="https://ble.ir/YOUR_ID"
-       target="_blank" rel="noopener noreferrer">
-      <img src="assets/bale.png" alt="">
-      <span>بله</span>
-    </a>
-    
-    <section class="info-card">
-      <h2>شماره تماس</h2>
-      <a class="contact-number" href="tel:09120657425">
-        09120657425
-      </a>
-    </section>
+  <a class="social-link" href="https://www.aparat.com/rangebehesht_ir"
+     target="_blank" rel="noopener noreferrer">
+    <img src="assets/aparat.png" alt="">
+    <span>آپارات</span>
+  </a>
 
-    <section class="info-card">
-      <h2>جهت واریز نذورات</h2>
-      <p class="card-number" dir="ltr">
-        5041721088748737
-      </p>
-      <p class="account-name">به نام: علیرضا اکبری</p>
-      <button
-        class="copy-button"
-        onclick="navigator.clipboard.writeText('5041721088748737').then(() => this.textContent = 'شماره کارت کپی شد')">
-        کپی شماره کارت
-      </button>
-    </section>
+  <a class="social-link" href="https://ble.ir/rangebehesht_ir"
+     target="_blank" rel="noopener noreferrer">
+    <img src="assets/bale.jpg" alt="">
+    <span>بله</span>
+  </a>
 
+  <section class="info-card">
+    <div class="info-title">شماره تماس</div>
+    <div class="info-value">
+      <a href="tel:09120657425">09120657425</a>
+    </div>
+    <div style="color:#E9DFC9;font-size:13px;">برای ارتباط با رنگ بهشت</div>
+  </section>
 
-    <footer>
-      رنگ بهشت؛ روایت عشق در مسیر خدمت
-    </footer>
+  <section class="info-card">
+    <div class="info-title">جهت واریز نذورات</div>
+    <div class="info-value" id="card-number">5041721088748737</div>
+    <div class="donation-name">به نام: علیرضا اکبری</div>
+    <button class="copy-button" onclick="copyCard()">کپی شماره کارت</button>
+    <div class="copy-message" id="copy-message" aria-live="polite"></div>
+  </section>
 
-  </main>
+  <footer class="footer-text">رنگ بهشت؛ روایت عشق در مسیر خدمت</footer>
+
+</main>
+
+<script>
+async function copyCard() {
+  const number = "5041721088748737";
+  const message = document.getElementById("copy-message");
+
+  try {
+    await navigator.clipboard.writeText(number);
+    message.textContent = "شماره کارت کپی شد.";
+  } catch (error) {
+    message.textContent = "شماره کارت را انتخاب و کپی کنید.";
+    const range = document.createRange();
+    range.selectNodeContents(document.getElementById("card-number"));
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+}
+</script>
 </body>
 </html>
